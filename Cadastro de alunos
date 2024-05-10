@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+//Cadastro de Alunos: Crie um programa que permita o cadastro de informações de alunos, incluindo nome, idade e média de notas. 
+//O programa deve utilizar um vetor para armazenar os dados de até 10 alunos e permitir a consulta dos dados cadastrados.
+
+
+
+int main(){
+	setlocale(LC_ALL,"portuguese");
+	
+	char alunos [10][20], consulta[20];
+	float notas [10];
+	int idade [10], indice,aluno_existe;
+	
+	for(int i=0;i<10;i++){
+	
+	printf("\n Digite o nome do aluno: ");
+	gets(alunos[i]);
+	fflush(stdin);
+	printf("\n Digite a idade do aluno: ");
+	scanf("%d",&idade[i]);
+	fflush(stdin);
+	printf("\n Digite a média do aluno: ");
+	scanf("%f",&notas[i]);
+	fflush(stdin);
+}
+printf("\nQual aluno voçe quer consultar: ");
+gets(consulta);
+
+for(int c=0;c<10;c++){
+	if(strcmp(consulta,alunos[c])==0){
+	printf("\n O Aluno: %s",alunos[indice]);
+	printf("\n%d",idade[indice]);
+	printf("\n%.2f",notas[indice]);
+	break;
+	}
+}
+}
